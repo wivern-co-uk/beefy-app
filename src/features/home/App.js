@@ -49,13 +49,7 @@ export default function App({ children }) {
   }, [web3Modal, connectWallet]);
 
   useEffect(() => {
-    if (
-      web3 &&
-      address &&
-      !connectWalletPending &&
-      networkId &&
-      Boolean(networkId !== Number(process.env.REACT_APP_NETWORK_ID))
-    ) {
+    if (web3 && address && !connectWalletPending && networkId) {
       alert(t('Network-Error'));
     }
   }, [web3, address, networkId, connectWalletPending, t]);
@@ -64,7 +58,10 @@ export default function App({ children }) {
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
         <SnackbarProvider>
-          <div className={classes.page} style={{ backgroundColor: theme.palette.background.default }}>
+          <div
+            className={classes.page}
+            style={{ backgroundColor: theme.palette.background.default }}
+          >
             <Header
               links={
                 <HeaderLinks
@@ -81,7 +78,7 @@ export default function App({ children }) {
             />
             <div className={classes.container}>
               <div className={classes.children}>
-                {Boolean(networkId === Number(process.env.REACT_APP_NETWORK_ID)) && children}
+                {networkId && children}
                 <Notifier />
               </div>
             </div>
