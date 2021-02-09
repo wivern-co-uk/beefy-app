@@ -1,6 +1,5 @@
 {
   "Disclaimer": "L'utilisation de Contrats Intelligents, de Jetons et de Crypto est toujours un risque. Faites vos propres recherches avant d'investir.",
-  "Network-Error": "Erreur Réseau",
   "Vault-Wallet": "Portefeuille",
   "Vault-Balance": "Solde",
   "Vault-APY": "PAR (Pourcentage Annuel de Rendement)",
@@ -31,4 +30,4 @@
   "Filters-Default": "Défaut",
   "Confirm": "Confirmer",
   "Cancel": "Annuler"
-} 
+}

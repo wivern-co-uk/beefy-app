@@ -48,12 +48,6 @@ export default function App({ children }) {
     }
   }, [web3Modal, connectWallet]);
 
-  useEffect(() => {
-    if (web3 && address && !connectWalletPending && networkId) {
-      alert(t('Network-Error'));
-    }
-  }, [web3, address, networkId, connectWalletPending, t]);
-
   return (
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
